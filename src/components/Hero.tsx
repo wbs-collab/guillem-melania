@@ -21,9 +21,9 @@ const Hero = () => {
               View Our Work
             </Button>
             <Button 
-              variant="outline" 
+              variant="secondary" 
               size="lg" 
-              className="text-lg px-8 py-4 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+              className="text-lg px-8 py-4"
               onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
             >
               Contact Us
