@@ -121,8 +121,9 @@ const Pricing = () => {
                     : 'bg-gradient-primary text-primary-foreground'
                 }`}
                 size="lg"
+                onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Get Started
+                Contact Us
               </Button>
             </Card>
           ))}
