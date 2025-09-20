@@ -1,9 +1,19 @@
 import { Button } from "@/components/ui/button";
+import heroBackground from "@/assets/hero-background.jpg";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero overflow-hidden">
-      <div className="absolute inset-0 bg-black/10"></div>
+    <section 
+      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      style={{
+        backgroundImage: `url(${heroBackground})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      <div className="absolute inset-0 bg-gradient-hero/80"></div>
+      <div className="absolute inset-0 bg-black/20"></div>
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center max-w-4xl mx-auto animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
