@@ -1,0 +1,175 @@
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Label } from "@/components/ui/label";
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
+
+const Contact = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 1000));
+    
+    toast({
+      title: "Message sent!",
+      description: "Thank you for your message. We'll get back to you within 24 hours.",
+    });
+    
+    setIsSubmitting(false);
+    (e.target as HTMLFormElement).reset();
+  };
+
+  const contactInfo = [
+    {
+      icon: <Mail className="w-6 h-6 text-primary" />,
+      label: "Email",
+      value: "hello@guillemmelania.com",
+      href: "mailto:hello@guillemmelania.com"
+    },
+    {
+      icon: <Phone className="w-6 h-6 text-primary" />,
+      label: "Phone", 
+      value: "+34 123 456 789",
+      href: "tel:+34123456789"
+    },
+    {
+      icon: <MapPin className="w-6 h-6 text-primary" />,
+      label: "Location",
+      value: "Barcelona, Spain",
+      href: null
+    },
+    {
+      icon: <Clock className="w-6 h-6 text-primary" />,
+      label: "Response Time",
+      value: "Within 24 hours",
+      href: null
+    }
+  ];
+
+  return (
+    <section id="contact" className="py-20 bg-background">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-16 animate-slide-up">
+          <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+            Let's Build Your Website
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Ready to take your business online? Get in touch and let's discuss your project.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+          {/* Contact Form */}
+          <Card className="p-8 shadow-soft border-0 bg-gradient-card animate-scale-in">
+            <h3 className="text-2xl font-bold text-foreground mb-6">
+              Send us a message
+            </h3>
+            
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div>
+                  <Label htmlFor="firstName" className="text-foreground">First Name</Label>
+                  <Input id="firstName" name="firstName" required className="mt-1" />
+                </div>
+                <div>
+                  <Label htmlFor="lastName" className="text-foreground">Last Name</Label>
+                  <Input id="lastName" name="lastName" required className="mt-1" />
+                </div>
+              </div>
+              
+              <div>
+                <Label htmlFor="email" className="text-foreground">Email</Label>
+                <Input id="email" name="email" type="email" required className="mt-1" />
+              </div>
+              
+              <div>
+                <Label htmlFor="phone" className="text-foreground">Phone (optional)</Label>
+                <Input id="phone" name="phone" type="tel" className="mt-1" />
+              </div>
+              
+              <div>
+                <Label htmlFor="business" className="text-foreground">Business Name</Label>
+                <Input id="business" name="business" required className="mt-1" />
+              </div>
+              
+              <div>
+                <Label htmlFor="message" className="text-foreground">Tell us about your project</Label>
+                <Textarea 
+                  id="message" 
+                  name="message" 
+                  required 
+                  className="mt-1 min-h-[120px]"
+                  placeholder="What kind of website do you need? What are your goals?"
+                />
+              </div>
+              
+              <Button 
+                type="submit" 
+                className="w-full bg-gradient-primary text-primary-foreground" 
+                size="lg"
+                disabled={isSubmitting}
+              >
+                {isSubmitting ? "Sending..." : "Send Message"}
+              </Button>
+            </form>
+          </Card>
+
+          {/* Contact Information */}
+          <div className="animate-scale-in">
+            <div className="mb-8">
+              <h3 className="text-2xl font-bold text-foreground mb-4">
+                Get in touch
+              </h3>
+              <p className="text-muted-foreground text-lg">
+                We'd love to hear about your project. Drop us a line and we'll get back to you with a custom quote.
+              </p>
+            </div>
+
+            <div className="space-y-6">
+              {contactInfo.map((info, index) => (
+                <div key={index} className="flex items-center gap-4">
+                  <div className="flex-shrink-0">
+                    {info.icon}
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground">{info.label}</p>
+                    {info.href ? (
+                      <a 
+                        href={info.href} 
+                        className="text-primary hover:text-primary-glow transition-colors"
+                      >
+                        {info.value}
+                      </a>
+                    ) : (
+                      <p className="text-muted-foreground">{info.value}</p>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <Card className="mt-8 p-6 bg-gradient-primary text-primary-foreground border-0">
+              <h4 className="font-bold text-lg mb-2">Free Consultation</h4>
+              <p className="text-primary-foreground/90">
+                Not sure which package is right for you? Book a free 30-minute consultation and we'll help you choose the perfect solution for your business.
+              </p>
+              <Button variant="secondary" className="mt-4">
+                Book Consultation
+              </Button>
+            </Card>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;
