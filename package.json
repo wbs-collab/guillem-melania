@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://gribes02.github.io/guillem-melania-sites",
+  "homepage": "https://wbs-collab.github.io/guillem-melania",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
