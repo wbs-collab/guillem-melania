@@ -1,12 +1,12 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, ArrowLeft } from "lucide-react";
 import { Link } from "react-router-dom";
 import marikaPage from "@/assets/Marika-page.png";
 import focacciaPage from "@/assets/Focaccia-page.png";
 import guillemPage from "@/assets/Guillem-page.png";
 
-const Portfolio = () => {
+const Projects = () => {
   const projects = [
     {
       title: "Marika Porricelli Psicologa",
@@ -35,14 +35,14 @@ const Portfolio = () => {
   ];
 
   return (
-    <section id="portfolio" className="py-20 bg-gradient-card">
+    <section id="portfolio" className="py-20 bg-gradient-card min-h-screen">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Our Recent Work
+            All Projects
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            See how we've helped local businesses establish their online presence with beautiful, functional websites.
+            Here are all the projects we've worked on.
           </p>
         </div>
 
@@ -89,17 +89,17 @@ const Portfolio = () => {
             </Card>
           ))}
         </div>
-
         <div className="text-center mt-12">
-          <Link to="/projects">
-            <Button size="lg" className="bg-gradient-primary text-primary-foreground">
-              View All Projects
-            </Button>
-          </Link>
+            <Link to="/">
+                <Button size="lg" className="bg-gradient-primary text-primary-foreground">
+                    <ArrowLeft className="w-4 h-4 mr-2" />
+                    Back to Home
+                </Button>
+            </Link>
         </div>
       </div>
     </section>
   );
 };
 
-export default Portfolio;
+export default Projects;
