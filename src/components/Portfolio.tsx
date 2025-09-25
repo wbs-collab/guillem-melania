@@ -172,7 +172,7 @@ const Portfolio = ({ lang }: PortfolioProps) => {
         </div>
 
         <div className="text-center mt-12">
-          <Link to="/">
+          <Link to="/projects">
             <Button size="lg" className="bg-gradient-primary text-primary-foreground">
               {t.viewAllProjects}
             </Button>

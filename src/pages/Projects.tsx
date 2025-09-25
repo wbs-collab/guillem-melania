@@ -83,7 +83,7 @@ const translations = {
 
 const Projects = () => {
   // Simple lang detection from URL path, defaults to 'en'
-  const lang = window.location.pathname.includes("/it.html") ? "it" : window.location.pathname.includes("/es.html") ? "es" : "en";
+  const lang = window.location.pathname.endsWith("/it") ? "it" : window.location.pathname.endsWith("/es") ? "es" : "en";
   const t = translations[lang];
 
   const projects = [
@@ -169,7 +169,7 @@ const Projects = () => {
           ))}
         </div>
         <div className="text-center mt-12">
-            <Link to={lang === "en" ? "/" : `/${lang}.html`}>
+            <Link to={lang === "en" ? "/" : `/${lang}`}>
                 <Button size="lg" className="bg-gradient-primary text-primary-foreground">
                     <ArrowLeft className="w-4 h-4 mr-2" />
                     {t.backToHome}
