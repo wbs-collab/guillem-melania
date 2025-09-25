@@ -31,14 +31,8 @@ const Contact = () => {
     {
       icon: <Mail className="w-6 h-6 text-primary" />,
       label: "Email",
-      value: "hello@guillemmelania.com",
-      href: "mailto:hello@guillemmelania.com"
-    },
-    {
-      icon: <Phone className="w-6 h-6 text-primary" />,
-      label: "Phone", 
-      value: "+34 123 456 789",
-      href: "tel:+34123456789"
+      value: "websitescollab@gmail.com",
+      href: "mailto:websitescollab@gmail.com"
     },
     {
       icon: <MapPin className="w-6 h-6 text-primary" />,
@@ -156,15 +150,6 @@ const Contact = () => {
               ))}
             </div>
 
-            <Card className="mt-8 p-6 bg-gradient-primary text-primary-foreground border-0">
-              <h4 className="font-bold text-lg mb-2">Free Consultation</h4>
-              <p className="text-primary-foreground/90">
-                Not sure which package is right for you? Book a free 30-minute consultation and we'll help you choose the perfect solution for your business.
-              </p>
-              <Button variant="secondary" className="mt-4">
-                Book Consultation
-              </Button>
-            </Card>
           </div>
         </div>
       </div>
