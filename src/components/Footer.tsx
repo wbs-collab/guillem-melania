@@ -15,14 +15,8 @@ const Footer = () => {
             <div className="space-y-2">
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4" />
-                <a href="mailto:hello@guillemmelania.com" className="hover:text-primary-foreground/80 transition-colors">
-                  hello@guillemmelania.com
-                </a>
-              </div>
-              <div className="flex items-center gap-3">
-                <Phone className="w-4 h-4" />
-                <a href="tel:+34123456789" className="hover:text-primary-foreground/80 transition-colors">
-                  +34 123 456 789
+                <a href="mailto:websitescollab@gmail.com" className="hover:text-primary-foreground/80 transition-colors">
+                  websitescollab@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-3">
@@ -62,11 +56,6 @@ const Footer = () => {
               <li>
                 <a href="#contact" className="hover:text-primary-foreground transition-colors">
                   Contact Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary-foreground transition-colors">
-                  Free Consultation
                 </a>
               </li>
             </ul>
