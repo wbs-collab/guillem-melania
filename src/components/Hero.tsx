@@ -27,7 +27,12 @@ const Hero = () => {
             Professional design, affordable pricing, and ongoing support.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="secondary" size="lg" className="text-lg px-8 py-4">
+            <Button 
+              variant="secondary" 
+              size="lg" 
+              className="text-lg px-8 py-4"
+              onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
+            >
               View Our Work
             </Button>
             <Button 

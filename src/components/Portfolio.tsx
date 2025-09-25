@@ -8,25 +8,28 @@ import portfolioBakery from "@/assets/portfolio-bakery.jpg";
 const Portfolio = () => {
   const projects = [
     {
-      title: "La Bella Vista Restaurant",
-      category: "Restaurant & Hospitality",
-      image: portfolioRestaurant,
-      description: "Elegant restaurant website with online menu, reservation system, and beautiful food photography gallery.",
-      features: ["Online Menu", "Reservation System", "Photo Gallery"]
-    },
-    {
-      title: "FitZone Gym",
-      category: "Fitness & Health", 
-      image: portfolioGym,
-      description: "Dynamic fitness center website with class schedules, trainer profiles, and membership information.",
-      features: ["Class Schedules", "Trainer Profiles", "Membership Plans"]
-    },
-    {
-      title: "Sweet Delights Bakery",
-      category: "Local Bakery",
+      title: "Marika Porricelli Psicologa",
+      category: "Personal & Professional Website",
       image: portfolioBakery,
-      description: "Charming bakery website showcasing fresh products with online ordering and pickup scheduling.",
-      features: ["Product Showcase", "Online Ordering", "Pickup Scheduling"]
+      description: "A professional website for a psychologist, offering information about services, contact details, and articles.",
+      features: ["Services Showcase", "Contact Form", "Blog/Articles"],
+      link: "https://www.marikaporricellipsicologa.it/"
+    },
+    {
+      title: "La Focaccia Delight",
+      category: "Restaurant & Food",
+      image: portfolioRestaurant,
+      description: "A delicious-looking website for a focaccia restaurant, with a menu and online presence.",
+      features: ["Online Menu", "Beautiful Gallery", "Contact Information"],
+      link: "https://la-focaccia-delight.lovable.app/"
+    },
+    {
+      title: "Guillem Ribes Espurz",
+      category: "Personal Portfolio",
+      image: portfolioGym,
+      description: "A personal portfolio for a Robotics Master's student, showcasing papers, projects, and CV.",
+      features: ["Project Showcase", "Publication List", "CV/Resume"],
+      link: "https://gribes02.github.io/"
     }
   ];
 
@@ -75,10 +78,12 @@ const Portfolio = () => {
                   ))}
                 </div>
 
-                <Button variant="outline" className="w-full group">
-                  View Project
-                  <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
-                </Button>
+                <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-full">
+                  <Button variant="outline" className="w-full group">
+                    View Project
+                    <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </a>
               </div>
             </Card>
           ))}
