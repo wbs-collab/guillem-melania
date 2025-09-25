@@ -14,10 +14,10 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter basename="/guillem-melania/">
+      <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Index />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route path="/guillem-melania" element={<Index />} />
+          <Route path="/guillem-melania/projects" element={<Projects />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

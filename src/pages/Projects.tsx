@@ -93,7 +93,7 @@ const Projects = () => {
           ))}
         </div>
         <div className="text-center mt-12">
-            <Link to="/">
+            <Link to="/guillem-melania">
                 <Button size="lg" className="bg-gradient-primary text-primary-foreground">
                     <ArrowLeft className="w-4 h-4 mr-2" />
                     {t("projectsPage.backToHome")}

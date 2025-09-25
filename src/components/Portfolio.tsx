@@ -94,7 +94,7 @@ const Portfolio = () => {
         </div>
 
         <div className="text-center mt-12">
-          <Link to="/projects">
+          <Link to="/guillem-melania/projects">
             <Button size="lg" className="bg-gradient-primary text-primary-foreground">
               {t("portfolio.viewAllProjects")}
             </Button>
