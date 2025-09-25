@@ -1,10 +1,9 @@
 import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 
 const languages = [
-  { code: "en", name: "ENG", to: "/" },
-  { code: "es", name: "ES", to: "/es" },
-  { code: "it", name: "IT", to: "/it" },
+  { code: "en", name: "ENG", href: "/guillem-melania/" },
+  { code: "es", name: "ES", href: "/guillem-melania/es.html" },
+  { code: "it", name: "IT", href: "/guillem-melania/it.html" },
 ];
 
 interface LanguageSwitcherProps {
@@ -23,7 +22,7 @@ const LanguageSwitcher = ({ currentLang }: LanguageSwitcherProps) => {
             className="text-primary-foreground"
             asChild
           >
-            <Link to={lng.to}>{lng.name}</Link>
+            <a href={lng.href}>{lng.name}</a>
           </Button>
         ))}
       </div>
