@@ -1,30 +1,27 @@
 import { Card } from "@/components/ui/card";
 import { CheckCircle, Smartphone, Search, Headphones } from "lucide-react";
-import { useTranslation } from "react-i18next";
 
 const Services = () => {
-  const { t } = useTranslation();
-
   const features = [
     {
       icon: <CheckCircle className="w-8 h-8 text-primary" />,
-      title: t("services.professionalDesign"),
-      description: t("services.professionalDesignDesc")
+      title: "Professional Design",
+      description: "Modern, clean designs that represent your brand perfectly and build customer trust."
     },
     {
       icon: <Smartphone className="w-8 h-8 text-primary" />,
-      title: t("services.mobileResponsive"),
-      description: t("services.mobileResponsiveDesc")
+      title: "Mobile Responsive", 
+      description: "Your website will look stunning on all devices - phones, tablets, and desktops."
     },
     {
       icon: <Search className="w-8 h-8 text-primary" />,
-      title: t("services.seoOptimized"),
-      description: t("services.seoOptimizedDesc")
+      title: "SEO Optimized",
+      description: "Built with search engines in mind to help customers find your business online."
     },
     {
       icon: <Headphones className="w-8 h-8 text-primary" />,
-      title: t("services.ongoingSupport"),
-      description: t("services.ongoingSupportDesc")
+      title: "Ongoing Support",
+      description: "Monthly maintenance and updates included to keep your website secure and fresh."
     }
   ];
 
@@ -33,10 +30,10 @@ const Services = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            {t("services.title")}
+            Why Choose Us?
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            {t("services.subtitle")}
+            We specialize in creating websites that not only look great but also help your business succeed online.
           </p>
         </div>
         

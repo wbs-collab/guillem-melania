@@ -1,9 +1,14 @@
 import { Mail, MapPin } from "lucide-react";
-import { useTranslation } from "react-i18next";
 
 const Footer = () => {
-  const { t } = useTranslation();
-  const services: string[] = t("footer.services", { returnObjects: true });
+  const services = [
+    "Website Design & Development",
+    "Mobile Responsive Design",
+    "SEO Optimization",
+    "Website Maintenance",
+    "Content Updates",
+    "Hosting & Security"
+  ];
 
   return (
     <footer className="bg-gradient-primary text-primary-foreground py-16">
@@ -11,9 +16,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div>
-            <h3 className="text-2xl font-bold mb-4">{t("footer.title")}</h3>
+            <h3 className="text-2xl font-bold mb-4">Guillem & Melania</h3>
             <p className="text-primary-foreground/90 mb-6 leading-relaxed">
-              {t("footer.subtitle")}
+              We create beautiful, professional websites for local businesses. 
+              Let us help you establish a strong online presence that drives results.
             </p>
             <div className="space-y-2">
               <div className="flex items-center gap-3">
@@ -24,14 +30,14 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3">
                 <MapPin className="w-4 h-4" />
-                <span>{t("contact.locationValue")}</span>
+                <span>Barcelona, Spain</span>
               </div>
             </div>
           </div>
 
           {/* Services */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">{t("footer.servicesTitle")}</h4>
+            <h4 className="text-lg font-semibold mb-4">Our Services</h4>
             <ul className="space-y-2 text-primary-foreground/90">
               {services.map((service, index) => (
                 <li key={index}>{service}</li>
@@ -41,21 +47,21 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">{t("footer.linksTitle")}</h4>
+            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2 text-primary-foreground/90">
               <li>
                 <a href="#pricing" className="hover:text-primary-foreground transition-colors">
-                  {t("footer.pricingLink")}
+                  Pricing
                 </a>
               </li>
               <li>
                 <a href="#portfolio" className="hover:text-primary-foreground transition-colors">
-                  {t("footer.workLink")}
+                  Our Work
                 </a>
               </li>
               <li>
                 <a href="#contact" className="hover:text-primary-foreground transition-colors">
-                  {t("footer.contactLink")}
+                  Contact Us
                 </a>
               </li>
             </ul>
@@ -63,9 +69,9 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/20 mt-12 pt-8 text-center text-primary-foreground/80">
-          <p dangerouslySetInnerHTML={{ __html: t("footer.copyright") }} />
+          <p>&copy; 2024 Guillem & Melania. All rights reserved.</p>
           <p className="mt-2 text-sm">
-            {t("footer.tagline")}
+            Helping local businesses succeed online, one beautiful website at a time.
           </p>
         </div>
       </div>
