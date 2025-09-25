@@ -4,22 +4,16 @@ import { Star } from "lucide-react";
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Maria Rodriguez",
-      business: "Casa Maria Restaurant", 
+      name: "Marika Porricelli",
+      business: "Psychologist", 
       rating: 5,
-      text: "Our new website has brought in so many more customers! The design is beautiful and our online reservations have doubled. Guillem & Melania made the whole process so easy."
+      text: "The website they built for me is professional, elegant, and perfectly represents my practice. It has made it so much easier for clients to find me and book appointments."
     },
     {
-      name: "Carlos Gutierrez", 
-      business: "FitLife Gym",
+      name: "Noemi Espurz", 
+      business: "La Focaccia Delight",
       rating: 5,
-      text: "Professional, responsive, and affordable. They understood exactly what we needed for our gym website. The mobile version looks amazing and our class bookings have increased significantly."
-    },
-    {
-      name: "Ana Fernandez",
-      business: "Sweet Dreams Bakery",
-      rating: 5,
-      text: "We love our new website! It perfectly captures the warmth of our bakery. The photo gallery showcases our products beautifully and customers can now easily find our opening hours and location."
+      text: "I'm so happy with my new restaurant website! It's visually stunning and easy to navigate! I highly recommend their services."
     }
   ];
 
@@ -35,7 +29,7 @@ const Testimonials = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           {testimonials.map((testimonial, index) => (
             <Card key={index} className="p-8 shadow-soft hover:shadow-medium transition-all duration-300 hover:-translate-y-2 animate-scale-in border-0 bg-gradient-card">
               <div className="flex items-center gap-1 mb-4">
