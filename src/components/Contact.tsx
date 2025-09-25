@@ -3,30 +3,9 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Mail, Phone, MapPin, Clock } from "lucide-react";
-import { useToast } from "@/hooks/use-toast";
-import { useState } from "react";
+import { Mail, MapPin, Clock } from "lucide-react";
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast({
-      title: "Message sent!",
-      description: "Thank you for your message. We'll get back to you within 24 hours.",
-    });
-    
-    setIsSubmitting(false);
-    (e.target as HTMLFormElement).reset();
-  };
-
   const contactInfo = [
     {
       icon: <Mail className="w-6 h-6 text-primary" />,
@@ -67,7 +46,7 @@ const Contact = () => {
               Send us a message
             </h3>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form action="https://formspree.io/f/mvgwgwrg" method="POST" className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <Label htmlFor="firstName" className="text-foreground">First Name</Label>
@@ -109,9 +88,8 @@ const Contact = () => {
                 type="submit" 
                 className="w-full bg-gradient-primary text-primary-foreground" 
                 size="lg"
-                disabled={isSubmitting}
               >
-                {isSubmitting ? "Sending..." : "Send Message"}
+                Send Message
               </Button>
             </form>
           </Card>
