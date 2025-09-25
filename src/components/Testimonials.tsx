@@ -1,19 +1,22 @@
 import { Card } from "@/components/ui/card";
 import { Star } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Testimonials = () => {
+  const { t } = useTranslation();
+
   const testimonials = [
     {
-      name: "Marika Porricelli",
-      business: "Psychologist", 
+      name: t("testimonials.testimonial1.name"),
+      business: t("testimonials.testimonial1.business"),
       rating: 5,
-      text: "The website they built for me is professional, elegant, and perfectly represents my practice. It has made it so much easier for clients to find me and book appointments."
+      text: t("testimonials.testimonial1.text")
     },
     {
-      name: "Noemi Espurz", 
-      business: "La Focaccia Delight",
+      name: t("testimonials.testimonial2.name"),
+      business: t("testimonials.testimonial2.business"),
       rating: 5,
-      text: "I'm so happy with my new restaurant website! It's visually stunning and easy to navigate! I highly recommend their services."
+      text: t("testimonials.testimonial2.text")
     }
   ];
 
@@ -22,10 +25,10 @@ const Testimonials = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            What Our Clients Say
+            {t("testimonials.title")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Don't just take our word for it. Here's what local businesses say about working with us.
+            {t("testimonials.subtitle")}
           </p>
         </div>
 

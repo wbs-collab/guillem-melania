@@ -2,57 +2,35 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Check } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Pricing = () => {
+  const { t } = useTranslation();
+
   const plans = [
     {
-      name: "Starter Site",
-      price: "€150",
-      monthly: "€10/month",
-      description: "Perfect for small businesses getting started online",
+      name: t("pricing.starterSite.name"),
+      price: t("pricing.starterSite.price"),
+      monthly: t("pricing.starterSite.monthly"),
+      description: t("pricing.starterSite.description"),
       popular: false,
-      features: [
-        "Up to 3 pages (Home, About, Contact)",
-        "Professional template design",
-        "Fully mobile-responsive",
-        "Contact form with email integration",
-        "Social media links",
-        "Website hosting included",
-        "Basic security & updates",
-        "2 minor updates per month"
-      ]
+      features: t("pricing.starterSite.features", { returnObjects: true }) as string[]
     },
     {
-      name: "Business Growth",
-      price: "€225", 
-      monthly: "€15/month",
-      description: "Most popular choice for growing businesses",
+      name: t("pricing.businessGrowth.name"),
+      price: t("pricing.businessGrowth.price"), 
+      monthly: t("pricing.businessGrowth.monthly"),
+      description: t("pricing.businessGrowth.description"),
       popular: true,
-      features: [
-        "Everything in Starter Site",
-        "Up to 5 pages (Menu, Services, Gallery)",
-        "Photo gallery integration",
-        "Embedded Google Maps",
-        "Enhanced security monitoring",
-        "5 minor updates per month",
-        "Priority support"
-      ]
+      features: t("pricing.businessGrowth.features", { returnObjects: true }) as string[]
     },
     {
-      name: "Professional One-Off",
-      price: "€350",
-      monthly: "One-time payment",
-      description: "Custom solution with full ownership",
+      name: t("pricing.professionalOneOff.name"),
+      price: t("pricing.professionalOneOff.price"),
+      monthly: t("pricing.professionalOneOff.monthly"),
+      description: t("pricing.professionalOneOff.description"),
       popular: false,
-      features: [
-        "Everything in Business Growth",
-        "Custom brand-matched design",
-        "1 year hosting included",
-        "Full website ownership",
-        "Optional maintenance plan (€120/year)",
-        "Future changes at €40/hour",
-        "Complete flexibility"
-      ]
+      features: t("pricing.professionalOneOff.features", { returnObjects: true }) as string[]
     }
   ];
 
@@ -61,10 +39,10 @@ const Pricing = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Simple, Transparent Pricing
+            {t("pricing.title")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Choose the perfect plan for your business. No hidden fees, no surprises.
+            {t("pricing.subtitle")}
           </p>
         </div>
 
@@ -77,7 +55,7 @@ const Pricing = () => {
             }`}>
               {plan.popular && (
                 <Badge className="absolute -top-3 left-1/2 transform -translate-x-1/2 bg-accent text-accent-foreground px-4 py-1">
-                  Most Popular
+                  {t("pricing.businessGrowth.popular")}
                 </Badge>
               )}
               
@@ -90,7 +68,7 @@ const Pricing = () => {
                     {plan.price}
                   </span>
                   <span className={`text-lg ${plan.popular ? 'text-primary-foreground/80' : 'text-muted-foreground'}`}>
-                    {' '}setup
+                    {' '}{t("pricing.setup")}
                   </span>
                 </div>
                 <div className={`text-lg font-semibold ${plan.popular ? 'text-primary-foreground' : 'text-accent'}`}>
@@ -123,7 +101,7 @@ const Pricing = () => {
                 size="lg"
                 onClick={() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Contact Us
+                {t("pricing.contactUs")}
               </Button>
             </Card>
           ))}

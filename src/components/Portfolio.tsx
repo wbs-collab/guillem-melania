@@ -5,31 +5,34 @@ import { Link } from "react-router-dom";
 import marikaPage from "@/assets/Marika-page.png";
 import focacciaPage from "@/assets/Focaccia-page.png";
 import guillemPage from "@/assets/Guillem-page.png";
+import { useTranslation } from "react-i18next";
 
 const Portfolio = () => {
+  const { t } = useTranslation();
+
   const projects = [
     {
-      title: "Marika Porricelli Psicologa",
-      category: "Personal & Professional Website",
+      title: t("portfolio.project1.title"),
+      category: t("portfolio.project1.category"),
       image: marikaPage,
-      description: "A professional website for a psychologist, offering information about services, contact details, and articles.",
-      features: ["Services Showcase", "Contact Form", "Blog/Articles"],
+      description: t("portfolio.project1.description"),
+      features: t("portfolio.project1.features", { returnObjects: true }) as string[],
       link: "https://www.marikaporricellipsicologa.it/"
     },
     {
-      title: "La Focaccia Delight",
-      category: "Restaurant & Food",
+      title: t("portfolio.project2.title"),
+      category: t("portfolio.project2.category"),
       image: focacciaPage,
-      description: "A delicious-looking website for a focaccia restaurant, with a menu and online presence.",
-      features: ["Online Menu", "Beautiful Gallery", "Contact Information"],
+      description: t("portfolio.project2.description"),
+      features: t("portfolio.project2.features", { returnObjects: true }) as string[],
       link: "https://la-focaccia-delight.lovable.app/"
     },
     {
-      title: "Guillem Ribes Espurz",
-      category: "Personal Portfolio",
+      title: t("portfolio.project3.title"),
+      category: t("portfolio.project3.category"),
       image: guillemPage,
-      description: "A personal portfolio for a Robotics Master's student, showcasing papers, projects, and CV.",
-      features: ["Project Showcase", "Publication List", "CV/Resume"],
+      description: t("portfolio.project3.description"),
+      features: t("portfolio.project3.features", { returnObjects: true }) as string[],
       link: "https://gribes02.github.io/"
     }
   ];
@@ -39,10 +42,10 @@ const Portfolio = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Our Recent Work
+            {t("portfolio.title")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            See how we've helped local businesses establish their online presence with beautiful, functional websites.
+            {t("portfolio.subtitle")}
           </p>
         </div>
 
@@ -81,7 +84,7 @@ const Portfolio = () => {
 
                 <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-full">
                   <Button variant="outline" className="w-full group">
-                    View Project
+                    {t("portfolio.viewProject")}
                     <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </a>
@@ -93,7 +96,7 @@ const Portfolio = () => {
         <div className="text-center mt-12">
           <Link to="/projects">
             <Button size="lg" className="bg-gradient-primary text-primary-foreground">
-              View All Projects
+              {t("portfolio.viewAllProjects")}
             </Button>
           </Link>
         </div>

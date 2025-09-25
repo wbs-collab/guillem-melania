@@ -1,27 +1,30 @@
 import { Card } from "@/components/ui/card";
 import { CheckCircle, Smartphone, Search, Headphones } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
 const Services = () => {
+  const { t } = useTranslation();
+
   const features = [
     {
       icon: <CheckCircle className="w-8 h-8 text-primary" />,
-      title: "Professional Design",
-      description: "Modern, clean designs that represent your brand perfectly and build customer trust."
+      title: t("services.professionalDesign"),
+      description: t("services.professionalDesignDesc")
     },
     {
       icon: <Smartphone className="w-8 h-8 text-primary" />,
-      title: "Mobile Responsive", 
-      description: "Your website will look stunning on all devices - phones, tablets, and desktops."
+      title: t("services.mobileResponsive"),
+      description: t("services.mobileResponsiveDesc")
     },
     {
       icon: <Search className="w-8 h-8 text-primary" />,
-      title: "SEO Optimized",
-      description: "Built with search engines in mind to help customers find your business online."
+      title: t("services.seoOptimized"),
+      description: t("services.seoOptimizedDesc")
     },
     {
       icon: <Headphones className="w-8 h-8 text-primary" />,
-      title: "Ongoing Support",
-      description: "Monthly maintenance and updates included to keep your website secure and fresh."
+      title: t("services.ongoingSupport"),
+      description: t("services.ongoingSupportDesc")
     }
   ];
 
@@ -30,10 +33,10 @@ const Services = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Why Choose Us?
+            {t("services.title")}
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            We specialize in creating websites that not only look great but also help your business succeed online.
+            {t("services.subtitle")}
           </p>
         </div>
         

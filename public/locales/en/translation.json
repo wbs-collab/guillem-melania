@@ -1,0 +1,156 @@
+{
+  "hero": {
+    "title": "Guillem & Melania",
+    "subtitle": "Beautiful websites for local businesses",
+    "description": "We create stunning, mobile-responsive websites that help your business grow online. Professional design, affordable pricing, and ongoing support.",
+    "viewWork": "View Our Work",
+    "contactUs": "Contact Us"
+  },
+  "services": {
+    "title": "Why Choose Us?",
+    "subtitle": "We specialize in creating websites that not only look great but also help your business succeed online.",
+    "professionalDesign": "Professional Design",
+    "professionalDesignDesc": "Modern, clean designs that represent your brand perfectly and build customer trust.",
+    "mobileResponsive": "Mobile Responsive",
+    "mobileResponsiveDesc": "Your website will look stunning on all devices - phones, tablets, and desktops.",
+    "seoOptimized": "SEO Optimized",
+    "seoOptimizedDesc": "Built with search engines in mind to help customers find your business online.",
+    "ongoingSupport": "Ongoing Support",
+    "ongoingSupportDesc": "Monthly maintenance and updates included to keep your website secure and fresh."
+  },
+  "pricing": {
+    "title": "Simple, Transparent Pricing",
+    "subtitle": "Choose the perfect plan for your business. No hidden fees, no surprises.",
+    "starterSite": {
+      "name": "Starter Site",
+      "price": "€150",
+      "monthly": "€10/month",
+      "description": "Perfect for small businesses getting started online",
+      "features": [
+        "Up to 3 pages (Home, About, Contact)",
+        "Professional template design",
+        "Fully mobile-responsive",
+        "Contact form with email integration",
+        "Social media links",
+        "Website hosting included",
+        "Basic security & updates",
+        "2 minor updates per month"
+      ]
+    },
+    "businessGrowth": {
+      "name": "Business Growth",
+      "price": "€225",
+      "monthly": "€15/month",
+      "description": "Most popular choice for growing businesses",
+      "popular": "Most Popular",
+      "features": [
+        "Everything in Starter Site",
+        "Up to 5 pages (Menu, Services, Gallery)",
+        "Photo gallery integration",
+        "Embedded Google Maps",
+        "Enhanced security monitoring",
+        "5 minor updates per month",
+        "Priority support"
+      ]
+    },
+    "professionalOneOff": {
+      "name": "Professional One-Off",
+      "price": "€350",
+      "monthly": "One-time payment",
+      "description": "Custom solution with full ownership",
+      "features": [
+        "Everything in Business Growth",
+        "Custom brand-matched design",
+        "1 year hosting included",
+        "Full website ownership",
+        "Optional maintenance plan (€120/year)",
+        "Future changes at €40/hour",
+        "Complete flexibility"
+      ]
+    },
+    "setup": "setup",
+    "contactUs": "Contact Us"
+  },
+  "portfolio": {
+    "title": "Our Recent Work",
+    "subtitle": "See how we've helped local businesses establish their online presence with beautiful, functional websites.",
+    "project1": {
+      "title": "Marika Porricelli Psicologa",
+      "category": "Personal & Professional Website",
+      "description": "A professional website for a psychologist, offering information about services, contact details, and articles.",
+      "features": ["Services Showcase", "Contact Form", "Blog/Articles"]
+    },
+    "project2": {
+      "title": "La Focaccia Delight",
+      "category": "Restaurant & Food",
+      "description": "A delicious-looking website for a focaccia restaurant, with a menu and online presence.",
+      "features": ["Online Menu", "Beautiful Gallery", "Contact Information"]
+    },
+    "project3": {
+      "title": "Guillem Ribes Espurz",
+      "category": "Personal Portfolio",
+      "description": "A personal portfolio for a Robotics Master's student, showcasing papers, projects, and CV.",
+      "features": ["Project Showcase", "Publication List", "CV/Resume"]
+    },
+    "viewProject": "View Project",
+    "viewAllProjects": "View All Projects"
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "Don't just take our word for it. Here's what local businesses say about working with us.",
+    "testimonial1": {
+      "name": "Marika Porricelli",
+      "business": "Psychologist",
+      "text": "The website they built for me is professional, elegant, and perfectly represents my practice. It has made it so much easier for clients to find me and book appointments."
+    },
+    "testimonial2": {
+      "name": "Noemi Espurz",
+      "business": "La Focaccia Delight",
+      "text": "I'm so happy with my new restaurant website! It's visually stunning and easy to navigate! I highly recommend their services."
+    }
+  },
+  "contact": {
+    "title": "Let's Build Your Website",
+    "subtitle": "Ready to take your business online? Get in touch and let's discuss your project.",
+    "formTitle": "Send us a message",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "phone": "Phone (optional)",
+    "businessName": "Business Name",
+    "message": "Tell us about your project",
+    "messagePlaceholder": "What kind of website do you need? What are your goals?",
+    "sendMessage": "Send Message",
+    "infoTitle": "Get in touch",
+    "infoSubtitle": "We'd love to hear about your project. Drop us a line and we'll get back to you with a custom quote.",
+    "emailLabel": "Email",
+    "locationLabel": "Location",
+    "locationValue": "Barcelona, Spain",
+    "responseLabel": "Response Time",
+    "responseValue": "Within 24 hours"
+  },
+  "footer": {
+    "title": "Guillem & Melania",
+    "subtitle": "We create beautiful, professional websites for local businesses. Let us help you establish a strong online presence that drives results.",
+    "servicesTitle": "Our Services",
+    "services": [
+      "Website Design & Development",
+      "Mobile Responsive Design",
+      "SEO Optimization",
+      "Website Maintenance",
+      "Content Updates",
+      "Hosting & Security"
+    ],
+    "linksTitle": "Quick Links",
+    "pricingLink": "Pricing",
+    "workLink": "Our Work",
+    "contactLink": "Contact Us",
+    "copyright": "&copy; 2024 Guillem & Melania. All rights reserved.",
+    "tagline": "Helping local businesses succeed online, one beautiful website at a time."
+  },
+  "projectsPage": {
+    "title": "All Projects",
+    "subtitle": "Here are all the projects we've worked on.",
+    "backToHome": "Back to Home"
+  }
+}
