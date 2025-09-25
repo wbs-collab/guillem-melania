@@ -6,18 +6,18 @@ import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
-const Index = () => {
+const Es = () => {
   return (
     <main className="min-h-screen">
-      <Hero lang="en" />
-      <Services lang="en" />
-      <Pricing lang="en" />
-      <Portfolio lang="en" />
-      <Testimonials lang="en" />
-      <Contact lang="en" />
-      <Footer lang="en" />
+      <Hero lang="es" />
+      <Services lang="es" />
+      <Pricing lang="es" />
+      <Portfolio lang="es" />
+      <Testimonials lang="es" />
+      <Contact lang="es" />
+      <Footer lang="es" />
     </main>
   );
 };
 
-export default Index;
+export default Es;

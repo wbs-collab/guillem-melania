@@ -6,30 +6,109 @@ import marikaPage from "@/assets/Marika-page.png";
 import focacciaPage from "@/assets/Focaccia-page.png";
 import guillemPage from "@/assets/Guillem-page.png";
 
-const Projects = () => {
-  const projects = [
-    {
+const translations = {
+  en: {
+    title: "All Projects",
+    subtitle: "Here are all the projects we've worked on.",
+    backToHome: "Back to Home",
+    viewProject: "View Project",
+    project1: {
       title: "Marika Porricelli Psicologa",
       category: "Personal & Professional Website",
-      image: marikaPage,
       description: "A professional website for a psychologist, offering information about services, contact details, and articles.",
-      features: ["Services Showcase", "Contact Form", "Blog/Articles"],
+      features: ["Services Showcase", "Contact Form", "Blog/Articles"]
+    },
+    project2: {
+      title: "La Focaccia Delight",
+      category: "Restaurant & Food",
+      description: "A delicious-looking website for a focaccia restaurant, with a menu and online presence.",
+      features: ["Online Menu", "Beautiful Gallery", "Contact Information"]
+    },
+    project3: {
+      title: "Guillem Ribes Espurz",
+      category: "Personal Portfolio",
+      description: "A personal portfolio for a Robotics Master's student, showcasing papers, projects, and CV.",
+      features: ["Project Showcase", "Publication List", "CV/Resume"]
+    }
+  },
+  es: {
+    title: "Todos los Proyectos",
+    subtitle: "Aquí están todos los proyectos en los que hemos trabajado.",
+    backToHome: "Volver al Inicio",
+    viewProject: "Ver Proyecto",
+    project1: {
+      title: "Marika Porricelli Psicologa",
+      category: "Sitio Web Personal y Profesional",
+      description: "Un sitio web profesional para una psicóloga, que ofrece información sobre servicios, datos de contacto y artículos.",
+      features: ["Muestra de Servicios", "Formulario de Contacto", "Blog/Artículos"]
+    },
+    project2: {
+      title: "La Focaccia Delight",
+      category: "Restaurante y Comida",
+      description: "Un sitio web de aspecto delicioso para un restaurante de focaccia, con menú y presencia en línea.",
+      features: ["Menú en Línea", "Galería Hermosa", "Información de Contacto"]
+    },
+    project3: {
+      title: "Guillem Ribes Espurz",
+      category: "Portafolio Personal",
+      description: "Un portafolio personal para un estudiante de maestría en robótica, que muestra artículos, proyectos y CV.",
+      features: ["Muestra de Proyectos", "Lista de Publicaciones", "CV/Currículum"]
+    }
+  },
+  it: {
+    title: "Tutti i Progetti",
+    subtitle: "Ecco tutti i progetti su cui abbiamo lavorato.",
+    backToHome: "Torna alla Home",
+    viewProject: "Vedi Progetto",
+    project1: {
+      title: "Marika Porricelli Psicologa",
+      category: "Sito Web Personale e Professionale",
+      description: "Un sito web professionale per una psicologa, che offre informazioni su servizi, dettagli di contatto e articoli.",
+      features: ["Vetrina dei Servizi", "Modulo di Contatto", "Blog/Articoli"]
+    },
+    project2: {
+      title: "La Focaccia Delight",
+      category: "Ristorante e Cibo",
+      description: "Un sito web dall'aspetto delizioso per un ristorante di focaccia, con menu e presenza online.",
+      features: ["Menu Online", "Bella Galleria", "Informazioni di Contatto"]
+    },
+    project3: {
+      title: "Guillem Ribes Espurz",
+      category: "Portfolio Personale",
+      description: "Un portfolio personale per uno studente di master in robotica, che mostra articoli, progetti e CV.",
+      features: ["Vetrina dei Progetti", "Elenco delle Pubblicazioni", "CV/Resume"]
+    }
+  }
+};
+
+const Projects = () => {
+  // Simple lang detection from URL path, defaults to 'en'
+  const lang = window.location.pathname.includes("/it") ? "it" : window.location.pathname.includes("/es") ? "es" : "en";
+  const t = translations[lang];
+
+  const projects = [
+    {
+      title: t.project1.title,
+      category: t.project1.category,
+      image: marikaPage,
+      description: t.project1.description,
+      features: t.project1.features,
       link: "https://www.marikaporricellipsicologa.it/"
     },
     {
-      title: "La Focaccia Delight",
-      category: "Restaurant & Food",
+      title: t.project2.title,
+      category: t.project2.category,
       image: focacciaPage,
-      description: "A delicious-looking website for a focaccia restaurant, with a menu and online presence.",
-      features: ["Online Menu", "Beautiful Gallery", "Contact Information"],
+      description: t.project2.description,
+      features: t.project2.features,
       link: "https://la-focaccia-delight.lovable.app/"
     },
     {
-      title: "Guillem Ribes Espurz",
-      category: "Personal Portfolio",
+      title: t.project3.title,
+      category: t.project3.category,
       image: guillemPage,
-      description: "A personal portfolio for a Robotics Master's student, showcasing papers, projects, and CV.",
-      features: ["Project Showcase", "Publication List", "CV/Resume"],
+      description: t.project3.description,
+      features: t.project3.features,
       link: "https://gribes02.github.io/"
     }
   ];
@@ -39,10 +118,10 @@ const Projects = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            All Projects
+            {t.title}
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Here are all the projects we've worked on.
+            {t.subtitle}
           </p>
         </div>
 
@@ -81,7 +160,7 @@ const Projects = () => {
 
                 <a href={project.link} target="_blank" rel="noopener noreferrer" className="w-full">
                   <Button variant="outline" className="w-full group">
-                    View Project
+                    {t.viewProject}
                     <ExternalLink className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </a>
@@ -90,10 +169,10 @@ const Projects = () => {
           ))}
         </div>
         <div className="text-center mt-12">
-            <Link to="/">
+            <Link to={lang === "en" ? "/" : `/${lang}`}>
                 <Button size="lg" className="bg-gradient-primary text-primary-foreground">
                     <ArrowLeft className="w-4 h-4 mr-2" />
-                    Back to Home
+                    {t.backToHome}
                 </Button>
             </Link>
         </div>

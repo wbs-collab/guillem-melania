@@ -1,27 +1,72 @@
 import { Card } from "@/components/ui/card";
 import { CheckCircle, Smartphone, Search, Headphones } from "lucide-react";
 
-const Services = () => {
+const translations = {
+  en: {
+    title: "Why Choose Us?",
+    subtitle: "We specialize in creating websites that not only look great but also help your business succeed online.",
+    professionalDesign: "Professional Design",
+    professionalDesignDesc: "Modern, clean designs that represent your brand perfectly and build customer trust.",
+    mobileResponsive: "Mobile Responsive",
+    mobileResponsiveDesc: "Your website will look stunning on all devices - phones, tablets, and desktops.",
+    seoOptimized: "SEO Optimized",
+    seoOptimizedDesc: "Built with search engines in mind to help customers find your business online.",
+    ongoingSupport: "Ongoing Support",
+    ongoingSupportDesc: "Monthly maintenance and updates included to keep your website secure and fresh."
+  },
+  es: {
+    title: "¿Por Qué Elegirnos?",
+    subtitle: "Nos especializamos en crear sitios web que no solo se ven geniales, sino que también ayudan a su negocio a tener éxito en línea.",
+    professionalDesign: "Diseño Profesional",
+    professionalDesignDesc: "Diseños modernos y limpios que representan su marca a la perfección y generan la confianza del cliente.",
+    mobileResponsive: "Adaptable a Móviles",
+    mobileResponsiveDesc: "Su sitio web se verá impresionante en todos los dispositivos: teléfonos, tabletas y computadoras de escritorio.",
+    seoOptimized: "Optimizado para SEO",
+    seoOptimizedDesc: "Construido pensando en los motores de búsqueda para ayudar a los clientes a encontrar su negocio en línea.",
+    ongoingSupport: "Soporte Continuo",
+    ongoingSupportDesc: "Mantenimiento mensual y actualizaciones incluidas para mantener su sitio web seguro y actualizado."
+  },
+  it: {
+    title: "Perché Sceglierci?",
+    subtitle: "Siamo specializzati nella creazione di siti web che non solo hanno un bell'aspetto, ma aiutano anche la tua attività ad avere successo online.",
+    professionalDesign: "Design Professionale",
+    professionalDesignDesc: "Design moderni e puliti che rappresentano perfettamente il tuo marchio e creano fiducia nei clienti.",
+    mobileResponsive: "Reattivo ai Dispositivi Mobili",
+    mobileResponsiveDesc: "Il tuo sito web apparirà straordinario su tutti i dispositivi: telefoni, tablet e desktop.",
+    seoOptimized: "Ottimizzato per SEO",
+    seoOptimizedDesc: "Costruito pensando ai motori di ricerca per aiutare i clienti a trovare la tua attività online.",
+    ongoingSupport: "Supporto Continuo",
+    ongoingSupportDesc: "Manutenzione mensile e aggiornamenti inclusi per mantenere il tuo sito web sicuro e aggiornato."
+  }
+};
+
+interface ServicesProps {
+  lang: "en" | "es" | "it";
+}
+
+const Services = ({ lang }: ServicesProps) => {
+  const t = translations[lang];
+
   const features = [
     {
       icon: <CheckCircle className="w-8 h-8 text-primary" />,
-      title: "Professional Design",
-      description: "Modern, clean designs that represent your brand perfectly and build customer trust."
+      title: t.professionalDesign,
+      description: t.professionalDesignDesc
     },
     {
       icon: <Smartphone className="w-8 h-8 text-primary" />,
-      title: "Mobile Responsive", 
-      description: "Your website will look stunning on all devices - phones, tablets, and desktops."
+      title: t.mobileResponsive,
+      description: t.mobileResponsiveDesc
     },
     {
       icon: <Search className="w-8 h-8 text-primary" />,
-      title: "SEO Optimized",
-      description: "Built with search engines in mind to help customers find your business online."
+      title: t.seoOptimized,
+      description: t.seoOptimizedDesc
     },
     {
       icon: <Headphones className="w-8 h-8 text-primary" />,
-      title: "Ongoing Support",
-      description: "Monthly maintenance and updates included to keep your website secure and fresh."
+      title: t.ongoingSupport,
+      description: t.ongoingSupportDesc
     }
   ];
 
@@ -30,10 +75,10 @@ const Services = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16 animate-slide-up">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-            Why Choose Us?
+            {t.title}
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            We specialize in creating websites that not only look great but also help your business succeed online.
+            {t.subtitle}
           </p>
         </div>
         
