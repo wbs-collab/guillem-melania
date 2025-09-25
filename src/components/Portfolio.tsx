@@ -1,16 +1,16 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
-import portfolioRestaurant from "@/assets/portfolio-restaurant.jpg";
-import portfolioGym from "@/assets/portfolio-gym.jpg";
-import portfolioBakery from "@/assets/portfolio-bakery.jpg";
+import marikaPage from "@/assets/Marika-page.png";
+import focacciaPage from "@/assets/Focaccia-page.png";
+import guillemPage from "@/assets/Guillem-page.png";
 
 const Portfolio = () => {
   const projects = [
     {
       title: "Marika Porricelli Psicologa",
       category: "Personal & Professional Website",
-      image: portfolioBakery,
+      image: marikaPage,
       description: "A professional website for a psychologist, offering information about services, contact details, and articles.",
       features: ["Services Showcase", "Contact Form", "Blog/Articles"],
       link: "https://www.marikaporricellipsicologa.it/"
@@ -18,7 +18,7 @@ const Portfolio = () => {
     {
       title: "La Focaccia Delight",
       category: "Restaurant & Food",
-      image: portfolioRestaurant,
+      image: focacciaPage,
       description: "A delicious-looking website for a focaccia restaurant, with a menu and online presence.",
       features: ["Online Menu", "Beautiful Gallery", "Contact Information"],
       link: "https://la-focaccia-delight.lovable.app/"
@@ -26,7 +26,7 @@ const Portfolio = () => {
     {
       title: "Guillem Ribes Espurz",
       category: "Personal Portfolio",
-      image: portfolioGym,
+      image: guillemPage,
       description: "A personal portfolio for a Robotics Master's student, showcasing papers, projects, and CV.",
       features: ["Project Showcase", "Publication List", "CV/Resume"],
       link: "https://gribes02.github.io/"
